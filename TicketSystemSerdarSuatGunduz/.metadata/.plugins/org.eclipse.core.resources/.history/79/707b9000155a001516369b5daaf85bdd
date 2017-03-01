@@ -1,0 +1,217 @@
+/**
+ */
+package Ticket.impl;
+
+import Ticket.Subscription;
+import Ticket.TicketPackage;
+
+import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+/**
+ * <!-- begin-user-doc -->
+ * An implementation of the model object '<em><b>Subscription</b></em>'.
+ * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * <ul>
+ *   <li>{@link Ticket.impl.SubscriptionImpl#getDaysNumber <em>Days Number</em>}</li>
+ *   <li>{@link Ticket.impl.SubscriptionImpl#getPrice <em>Price</em>}</li>
+ * </ul>
+ * </p>
+ *
+ * @generated
+ */
+public class SubscriptionImpl extends MinimalEObjectImpl.Container implements Subscription {
+	/**
+	 * The default value of the '{@link #getDaysNumber() <em>Days Number</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDaysNumber()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int DAYS_NUMBER_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getDaysNumber() <em>Days Number</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDaysNumber()
+	 * @generated
+	 * @ordered
+	 */
+	protected int daysNumber = DAYS_NUMBER_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPrice() <em>Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrice()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int PRICE_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getPrice() <em>Price</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrice()
+	 * @generated
+	 * @ordered
+	 */
+	protected int price = PRICE_EDEFAULT;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SubscriptionImpl() {
+		super();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EClass eStaticClass() {
+		return TicketPackage.Literals.SUBSCRIPTION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getDaysNumber() {
+		return daysNumber;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDaysNumber(int newDaysNumber) {
+		int oldDaysNumber = daysNumber;
+		daysNumber = newDaysNumber;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TicketPackage.SUBSCRIPTION__DAYS_NUMBER, oldDaysNumber, daysNumber));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getPrice() {
+		return price;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrice(int newPrice) {
+		int oldPrice = price;
+		price = newPrice;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, TicketPackage.SUBSCRIPTION__PRICE, oldPrice, price));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eGet(int featureID, boolean resolve, boolean coreType) {
+		switch (featureID) {
+			case TicketPackage.SUBSCRIPTION__DAYS_NUMBER:
+				return getDaysNumber();
+			case TicketPackage.SUBSCRIPTION__PRICE:
+				return getPrice();
+		}
+		return super.eGet(featureID, resolve, coreType);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eSet(int featureID, Object newValue) {
+		switch (featureID) {
+			case TicketPackage.SUBSCRIPTION__DAYS_NUMBER:
+				setDaysNumber((Integer)newValue);
+				return;
+			case TicketPackage.SUBSCRIPTION__PRICE:
+				setPrice((Integer)newValue);
+				return;
+		}
+		super.eSet(featureID, newValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void eUnset(int featureID) {
+		switch (featureID) {
+			case TicketPackage.SUBSCRIPTION__DAYS_NUMBER:
+				setDaysNumber(DAYS_NUMBER_EDEFAULT);
+				return;
+			case TicketPackage.SUBSCRIPTION__PRICE:
+				setPrice(PRICE_EDEFAULT);
+				return;
+		}
+		super.eUnset(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public boolean eIsSet(int featureID) {
+		switch (featureID) {
+			case TicketPackage.SUBSCRIPTION__DAYS_NUMBER:
+				return daysNumber != DAYS_NUMBER_EDEFAULT;
+			case TicketPackage.SUBSCRIPTION__PRICE:
+				return price != PRICE_EDEFAULT;
+		}
+		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (DaysNumber: ");
+		result.append(daysNumber);
+		result.append(", Price: ");
+		result.append(price);
+		result.append(')');
+		return result.toString();
+	}
+
+} //SubscriptionImpl

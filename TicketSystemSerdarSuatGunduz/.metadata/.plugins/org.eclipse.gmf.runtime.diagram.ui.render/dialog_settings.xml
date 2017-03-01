@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="CopyToImageDialog">
+		<item value="jpg" key="CopyToImageDialog.imageFormat"/>
+		<item value="C:\Users\core\Desktop\ASEProjectSerdarSuatGunduz-797337" key="CopyToImageDialog.folder"/>
+		<item value="true" key="CopyToImageDialog.exportToHTML"/>
+		<item value="false" key="CopyToImageDialog.overwriteExisting"/>
+	</section>
+</section>

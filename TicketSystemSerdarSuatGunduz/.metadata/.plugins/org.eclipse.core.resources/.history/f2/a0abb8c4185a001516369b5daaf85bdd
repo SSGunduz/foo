@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.eclipse.example.Ticketmodel/src" modelPluginID="org.eclipse.example.Ticketmodel"
+    modelName="Ticket" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>Ticket.ecore</foreignModel>
+  <genPackages prefix="Ticket" disposableProviderFactory="true" ecorePackage="Ticket.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ticket.ecore#//Area">
+      <genEnumLiterals ecoreEnumLiteral="Ticket.ecore#//Area/Large"/>
+      <genEnumLiterals ecoreEnumLiteral="Ticket.ecore#//Area/Medium"/>
+      <genEnumLiterals ecoreEnumLiteral="Ticket.ecore#//Area/Small"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ticket.ecore#//CopyType">
+      <genEnumLiterals ecoreEnumLiteral="Ticket.ecore#//CopyType/Digital"/>
+      <genEnumLiterals ecoreEnumLiteral="Ticket.ecore#//CopyType/Paper"/>
+      <genEnumLiterals ecoreEnumLiteral="Ticket.ecore#//CopyType/Electronic"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Ticket.ecore#//FieraTicket">
+      <genEnumLiterals ecoreEnumLiteral="Ticket.ecore#//FieraTicket/Single"/>
+      <genEnumLiterals ecoreEnumLiteral="Ticket.ecore#//FieraTicket/Return"/>
+      <genEnumLiterals ecoreEnumLiteral="Ticket.ecore#//FieraTicket/DayPass"/>
+    </genEnums>
+    <genClasses ecoreClass="Ticket.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//Person/Name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ticket.ecore#//Person/IntercityTickets"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ticket.ecore#//Person/CityTickets"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//Person/Age"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ticket.ecore#//Person/subscription"/>
+    </genClasses>
+    <genClasses ecoreClass="Ticket.ecore#//Urban"/>
+    <genClasses ecoreClass="Ticket.ecore#//Standard"/>
+    <genClasses ecoreClass="Ticket.ecore#//ExtraUrban">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//ExtraUrban/Zone"/>
+    </genClasses>
+    <genClasses ecoreClass="Ticket.ecore#//CityTicket">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//CityTicket/Price"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//CityTicket/Validity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//CityTicket/Date"/>
+    </genClasses>
+    <genClasses ecoreClass="Ticket.ecore#//TwoWay"/>
+    <genClasses ecoreClass="Ticket.ecore#//OneWay"/>
+    <genClasses ecoreClass="Ticket.ecore#//WeeklyPass"/>
+    <genClasses ecoreClass="Ticket.ecore#//Luggage"/>
+    <genClasses ecoreClass="Ticket.ecore#//CumulativeTickets"/>
+    <genClasses ecoreClass="Ticket.ecore#//StandardCumulative"/>
+    <genClasses ecoreClass="Ticket.ecore#//CumulativeOneDay">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//CumulativeOneDay/Area"/>
+    </genClasses>
+    <genClasses ecoreClass="Ticket.ecore#//Weekly"/>
+    <genClasses ecoreClass="Ticket.ecore#//FairTicket">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//FairTicket/FieraTicket"/>
+    </genClasses>
+    <genClasses ecoreClass="Ticket.ecore#//IntercityTicket">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//IntercityTicket/Usage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//IntercityTicket/Price"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//IntercityTicket/Stamped"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//IntercityTicket/CopyType"/>
+    </genClasses>
+    <genClasses ecoreClass="Ticket.ecore#//SingleTicket"/>
+    <genClasses ecoreClass="Ticket.ecore#//MultiJourney">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//MultiJourney/NumberOfJourney"/>
+    </genClasses>
+    <genClasses ecoreClass="Ticket.ecore#//MultiDayTicket">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//MultiDayTicket/NumberOfDays"/>
+    </genClasses>
+    <genClasses ecoreClass="Ticket.ecore#//Subscription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//Subscription/DaysNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//Subscription/Price"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//Subscription/ID"/>
+    </genClasses>
+    <genClasses ecoreClass="Ticket.ecore#//Youth"/>
+    <genClasses ecoreClass="Ticket.ecore#//Child"/>
+    <genClasses ecoreClass="Ticket.ecore#//Adult"/>
+    <genClasses ecoreClass="Ticket.ecore#//TicketSystem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Ticket.ecore#//TicketSystem/City"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Ticket.ecore#//TicketSystem/persons"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

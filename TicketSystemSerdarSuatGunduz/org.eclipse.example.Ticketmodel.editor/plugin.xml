@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated Ticket -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="Ticket.presentation.TicketModelWizardID"
+            name="%_UI_TicketModelWizard_label"
+            class="Ticket.presentation.TicketModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/TicketModelFile.gif">
+         <description>%_UI_TicketModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated Ticket -->
+      <editor
+            id="Ticket.presentation.TicketEditorID"
+            name="%_UI_TicketEditor_label"
+            icon="icons/full/obj16/TicketModelFile.gif"
+            extensions="ticket"
+            class="Ticket.presentation.TicketEditor"
+            contributorClass="Ticket.presentation.TicketActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

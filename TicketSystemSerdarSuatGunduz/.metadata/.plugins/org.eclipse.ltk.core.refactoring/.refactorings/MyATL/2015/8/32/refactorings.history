@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;model.xmi&apos; to &apos;Persons.ecore&apos;&#x0D;&#x0A;- Original project: &apos;MyATL&apos;&#x0D;&#x0A;- Destination element: &apos;Persons.ecore&apos;&#x0D;&#x0A;- Original element: &apos;model.xmi&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" element1="model.xmi" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1438803642386" target="/MyProject/Persons.ecore" units="0" version="1.0"/>
+</session>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<component id="com.vogella.emf.webpage.model" modificationStamp="7026" version="1.2">
+    <package visibility="1">
+        <fragment handle="=com.vogella.emf.webpage.model/src&lt;de.vogella.emf.webpage.model.Webpage"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=com.vogella.emf.webpage.model/src&lt;de.vogella.emf.webpage.model.Webpage.impl"/>
+    </package>
+    <package visibility="1">
+        <fragment handle="=com.vogella.emf.webpage.model/src&lt;de.vogella.emf.webpage.model.Webpage.util"/>
+    </package>
+</component>

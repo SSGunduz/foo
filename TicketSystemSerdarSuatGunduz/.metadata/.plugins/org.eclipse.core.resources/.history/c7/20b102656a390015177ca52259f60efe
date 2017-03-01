@@ -1,0 +1,6 @@
+-- @path MM=/CircleToSquarts/Metamodels/Circle_metamodel.ecore
+-- @path MM1=/CircleToSquarts/Metamodels/Squart_metamodel.ecore
+
+module MyRules;
+create OUT : MM1 from IN : MM;
+

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Ticket" nsURI="http://org/eclipse/example/Ticket" nsPrefix="org.eclipse.example.Ticket">
+  <eClassifiers xsi:type="ecore:EClass" name="Person">
+    <eAnnotations/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="IntercityTickets" upperBound="-1"
+        eType="#//IntercityTicket" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="CityTickets" upperBound="-1"
+        eType="#//CityTicket" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Age" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subscription" eType="#//Subscription"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Urban" eSuperTypes="#//CityTicket"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Standard" eSuperTypes="#//ExtraUrban"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtraUrban" eSuperTypes="#//CityTicket">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Zone" eType="ecore:EDataType Ecore.ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CityTicket">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Validity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TwoWay" eSuperTypes="#//Urban"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OneWay" eSuperTypes="#//Urban"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WeeklyPass" eSuperTypes="#//ExtraUrban"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Luggage" eSuperTypes="#//ExtraUrban"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CumulativeTickets" eSuperTypes="#//CityTicket"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StandardCumulative" eSuperTypes="#//CumulativeTickets"/>
+  <eClassifiers xsi:type="ecore:EClass" name="CumlativeOneDay" eSuperTypes="#//CumulativeTickets">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Area" eType="#//Area"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Weekly" eSuperTypes="#//CumulativeTickets"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FairTicket" eSuperTypes="#//CityTicket">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="FieraTicket" eType="#//FieraTicket"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Area">
+    <eLiterals name="Large"/>
+    <eLiterals name="Medium"/>
+    <eLiterals name="Small"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntercityTicket">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Usage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Stamped" eType="ecore:EDataType Ecore.ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="CopyType" eType="#//CopyType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SingleTicket" eSuperTypes="#//IntercityTicket"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MultiJourney" eSuperTypes="#//IntercityTicket">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NumberOfJourney" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultiDayTicket" eSuperTypes="#//IntercityTicket">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="NumberOfDays" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CopyType">
+    <eLiterals name="Digital"/>
+    <eLiterals name="Paper"/>
+    <eLiterals name="Electronic"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="FieraTicket">
+    <eLiterals name="Single"/>
+    <eLiterals name="Return"/>
+    <eLiterals name="DayPass"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Subscription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="DaysNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Youth" eSuperTypes="#//Person"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Child" eSuperTypes="#//Person"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Adult" eSuperTypes="#//Person"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TicketSystem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="City" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="persons" upperBound="-1"
+        eType="#//Person" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

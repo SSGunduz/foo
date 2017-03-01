@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ASCII"?>
+<org.eclipse.example.Ticket:TicketSystem
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:org.eclipse.example.Ticket="http://org/eclipse/example/ticketmodel"
+    xsi:schemaLocation="http://org/eclipse/example/ticketmodel Ticket.ecore">
+  <persons Name="Camelia"
+      Age="23">
+    <IntercityTickets
+        Usage="Usable"
+        Price="5"
+        CopyType="Paper"/>
+    <IntercityTickets
+        xsi:type="org.eclipse.example.Ticket:MultiJourney"
+        Usage="Usable"
+        Price="50"
+        NumberOfJourney="10"/>
+    <CityTickets
+        Price="5"
+        Validity="valid"/>
+    <CityTickets
+        xsi:type="org.eclipse.example.Ticket:Urban"
+        Price="2"
+        Validity="valid"/>
+    <CityTickets
+        xsi:type="org.eclipse.example.Ticket:OneWay"
+        Price="2"
+        Validity="not valid"/>
+    <subscription
+        DaysNumber="15"
+        Price="60"
+        ID="8122"/>
+  </persons>
+  <persons xsi:type="org.eclipse.example.Ticket:Youth"
+      Name="Nico"
+      Age="18">
+    <IntercityTickets
+        Usage="usable"
+        Price="4"/>
+    <IntercityTickets
+        xsi:type="org.eclipse.example.Ticket:MultiDayTicket"
+        Usage="usable"
+        Price="80"
+        NumberOfDays="20"/>
+  </persons>
+  <persons xsi:type="org.eclipse.example.Ticket:Adult"
+      Name="Giuseppe"
+      Age="35">
+    <CityTickets
+        Price="3"
+        Validity="valid"/>
+    <CityTickets
+        xsi:type="org.eclipse.example.Ticket:FairTicket"
+        Price="14"
+        Validity="valid"
+        Date="20.03.2015"/>
+    <subscription/>
+  </persons>
+  <persons xsi:type="org.eclipse.example.Ticket:Child">
+    <CityTickets
+        xsi:type="org.eclipse.example.Ticket:CumulativeTickets"
+        Validity="valid"/>
+  </persons>
+</org.eclipse.example.Ticket:TicketSystem>
